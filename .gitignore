@@ -1,0 +1,84 @@
+# =========================================
+# 🚫 Git Ignore for MERN Stack Backend
+# Project: SculpTech Labs Backend Server
+# =========================================
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# --- Environment Variables ---
+.env
+.env.development
+.env.production
+.env.local
+.env.test
+
+# --- Logs ---
+logs/
+*.log
+logs/*.log
+debug.log
+error.log
+out.log
+
+# --- Build & Coverage ---
+dist/
+build/
+coverage/
+.nyc_output/
+.tmp/
+
+# --- IDE & Editor Files ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Temporary Files ---
+*.tmp
+*.bak
+*.pid
+*.seed
+*.pid.lock
+
+# --- Uploads / Generated Assets ---
+uploads/
+public/uploads/
+temp/
+tmp/
+
+# --- Test & Reports ---
+jest-report/
+coverage-final.json
+*.lcov
+reports/
+
+# --- MongoDB / Database Dumps ---
+dump/
+*.bson
+*.json
+*.csv
+
+# --- Optional Cache Directories ---
+.cache/
+.eslintcache
+.nodemonignore
+.repl_history
+
+# ---
