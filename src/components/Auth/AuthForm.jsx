@@ -34,7 +34,7 @@ const AuthForm = () => {
       } else {
         await register(formData);
       }
-      navigate('/dashboard'); // Redirect to dashboard on successful auth
+  navigate('/products'); // Redirect to product list on successful auth
     } catch (err) {
       setError(err || 'An unexpected error occurred.');
     } finally {
@@ -44,7 +44,7 @@ const AuthForm = () => {
 
   // Redirect if already authenticated
   if (isAuthenticated && !loading) {
-    navigate('/dashboard');
+    navigate('/products');
     return null;
   }
 
@@ -135,12 +135,12 @@ const AuthForm = () => {
                   name="role"
                   value={formData.role}
                   onChange={handleChange}
-                  disabled={true} // Only allow 'user' role for self-registration
                 >
                   <option value="user">User</option>
-                  {/* <option value="manager">Manager</option>
-                  <option value="admin">Admin</option> */}
+                  <option value="manager">Manager</option>
+                  <option value="admin">Admin</option>
                 </select>
+                <small className="muted">Choose a role. Administrators should verify higher roles server-side.</small>
               </div>
             </>
           )}

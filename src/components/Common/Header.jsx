@@ -27,14 +27,13 @@ const Header = () => {
               <li>Loading...</li>
             ) : isAuthenticated ? (
               <>
-                <li><Link to="/dashboard">Dashboard</Link></li>
+                {/* Dashboard removed per new flow; users go straight to Products */}
                 {user && user.role === 'admin' && <li><Link to="/users">Users</Link></li>}
                 <li><button onClick={handleLogout} className="btn-outline">Logout ({user?.name || 'User'})</button></li>
               </>
             ) : (
               <>
-                <li><Link to="/login">Login</Link></li>
-                {/* Registration is handled in the same form, but could have a separate link to AuthPage in register mode */}
+                <li><Link to="/login">Login / Register</Link></li>
               </>
             )}
           </ul>

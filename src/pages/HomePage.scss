@@ -3,20 +3,34 @@
 .home-page {
   text-align: center;
   padding: 2rem 0;
+  .hero-blob {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+    opacity: 0.15;
+    transform: translate(-50%, -50%);
+    animation: float 8s ease-in-out infinite;
+  }
 }
 
 .hero-section {
-  background-color: var(--card-dark);
+  position: relative;
+  background: linear-gradient(135deg, rgba(22,33,62,0.8), rgba(10,17,40,0.9));
   padding: 4rem 2rem;
   border-radius: 15px;
   margin-bottom: 3rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
 
   h1 {
     font-size: 3.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
     line-height: 1.2;
+    animation: fadeInUp 900ms ease both;
   }
 
   p {
@@ -26,6 +40,7 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    animation: fadeInUp 1100ms ease both;
   }
 
   .hero-buttons {
@@ -38,6 +53,10 @@
       font-size: 1.2rem;
       font-weight: 600;
       border-radius: 8px;
+      transform: translateY(0);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      animation: popIn 700ms ease both;
     }
     .btn-outline {
       border: 2px solid var(--primary-color);
@@ -46,9 +65,28 @@
       &:hover {
         background-color: var(--primary-color);
         color: white;
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.5);
       }
     }
   }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(-40%); }
+  50% { transform: translateY(-12px) translateX(-36%); }
+  100% { transform: translateY(0) translateX(-40%); }
 }
 
 .features-section {

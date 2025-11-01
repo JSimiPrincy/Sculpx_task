@@ -61,7 +61,8 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background-color: darken(var(--primary-color), 10%);
+    /* darken() cannot consume CSS vars — use color-mix to approximate darken */
+    background-color: color-mix(in srgb, var(--primary-color) 90%, black 10%);
     transform: translateY(-1px);
   }
 
@@ -72,14 +73,14 @@ button {
   &.btn-secondary {
     background-color: var(--secondary-color);
     &:hover {
-      background-color: darken(var(--secondary-color), 10%);
+      background-color: color-mix(in srgb, var(--secondary-color) 90%, black 10%);
     }
   }
 
   &.btn-danger {
     background-color: var(--danger-color);
     &:hover {
-      background-color: darken(var(--danger-color), 10%);
+      background-color: color-mix(in srgb, var(--danger-color) 90%, black 10%);
     }
   }
 
@@ -114,7 +115,8 @@ textarea {
   &:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.2);
+    /* Use color-mix to create a translucent outline from the CSS variable color */
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 20%, transparent);
   }
 
   &::placeholder {

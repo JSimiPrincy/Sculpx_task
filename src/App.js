@@ -6,7 +6,7 @@ import Header from './components/Common/Header';
 import Footer from './components/Common/Footer';
 import HomePage from './pages/HomePage';
 import AuthPage from './pages/AuthPage'; // For Login/Register
-import DashboardPage from './pages/DashboardPage';
+// Dashboard is removed from the navigation; users go straight to products
 import ProductListPage from './pages/ProductListPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import AddProductPage from './pages/AddProductPage';
@@ -29,10 +29,7 @@ const App = () => {
               <Route path="/products" element={<ProductListPage />} />
               <Route path="/products/:id" element={<ProductDetailsPage />} />
 
-              {/* Protected Routes */}
-              <Route element={<PrivateRoute allowedRoles={[ROLES.USER, ROLES.ADMIN, ROLES.MANAGER]} />}>
-                <Route path="/dashboard" element={<DashboardPage />} />
-              </Route>
+              {/* Protected Routes (dashboard removed) */}
 
               <Route element={<PrivateRoute allowedRoles={[ROLES.ADMIN, ROLES.MANAGER]} />}>
                 <Route path="/products/add" element={<AddProductPage />} />

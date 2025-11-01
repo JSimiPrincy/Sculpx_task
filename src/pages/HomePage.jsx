@@ -7,6 +7,10 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <section className="hero-section">
+        {/* decorative animated blobs */}
+        <div className="hero-blob" style={{ left: '-10%', top: '10%', background: 'radial-gradient(circle at 30% 30%, rgba(0,123,255,0.45), transparent 40%)' }} aria-hidden="true"></div>
+        <div className="hero-blob" style={{ right: '-8%', bottom: '-6%', background: 'radial-gradient(circle at 70% 70%, rgba(22,33,62,0.5), transparent 40%)' }} aria-hidden="true"></div>
+
         <h1>Welcome to SCULPTECH LABS</h1>
         <p>Your one-stop solution for managing cutting-edge products.</p>
         <div className="hero-buttons">

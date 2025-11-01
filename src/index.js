@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// Global CSS must load before component styles so CSS variables are available
 import './index.css';
+import './assets/styles/global.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
