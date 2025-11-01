@@ -1,0 +1,29 @@
+/* src/pages/PageStyles.scss */
+
+.page-container {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: var(--card-dark);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.page-message {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  // Use existing button styles from global.scss or define here
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+}

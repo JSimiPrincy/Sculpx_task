@@ -1,0 +1,131 @@
+.auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.auth-form-container .form-card {
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.auth-toggle {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--input-bg-dark);
+
+  button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &.active {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+}
+
+.auth-form-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.auth-form-container .form-group {
+  text-align: left;
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+}
+
+.auth-form-container input,
+.auth-form-container select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-dark);
+  border-radius: 5px;
+  background-color: var(--input-bg-dark);
+  color: var(--text-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &::placeholder {
+    color: var(--text-muted);
+  }
+}
+
+.auth-form-container button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    /* Replaced darken() with color-mix() */
+    background-color: color-mix(in srgb, var(--primary-color), black 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.auth-form-container .forgot-password {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+
+  a {
+    color: var(--primary-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.auth-form-container .error-message {
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}

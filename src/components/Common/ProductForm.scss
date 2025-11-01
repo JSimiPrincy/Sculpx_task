@@ -1,0 +1,94 @@
+/* src/components/Forms/ProductForm.scss */
+
+.product-form {
+  max-width: 600px;
+  margin: 2rem auto; // Center form horizontally
+  padding: 2.5rem;
+
+  h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    input[type='text'],
+    input[type='number'],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--border-dark);
+      border-radius: 5px;
+      background-color: var(--input-bg-dark);
+      color: var(--text-light);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.2);
+      }
+
+      &::placeholder {
+        color: var(--text-muted);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem; // Adjusted margin for better spacing
+
+    input[type='checkbox'] {
+      margin-right: 0.8rem;
+      width: auto;
+      transform: scale(1.3); // Make checkbox slightly larger
+      accent-color: var(--primary-color); // Style the checkbox itself
+      cursor: pointer;
+
+      &:focus {
+        box-shadow: none; // No need for box-shadow on checkbox focus
+      }
+    }
+
+    label {
+      margin-bottom: 0;
+      color: var(--text-light);
+      cursor: pointer;
+    }
+  }
+
+  button[type='submit'] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .error-message {
+    color: var(--danger-color);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}

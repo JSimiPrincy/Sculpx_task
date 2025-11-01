@@ -1,0 +1,32 @@
+/* src/components/Common/SortDropdown.scss */
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  select {
+    width: auto; // Allow select to size dynamically
+    padding: 0.6rem 1rem;
+    margin-bottom: 0; // Override global margin
+    border-color: var(--border-dark);
+    background-color: var(--input-bg-dark);
+    color: var(--text-light);
+    appearance: none; // Remove default dropdown arrow
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e0e0e0'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+    
+    &:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.2);
+    }
+  }
+}

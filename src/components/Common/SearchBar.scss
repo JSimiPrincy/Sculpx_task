@@ -1,0 +1,36 @@
+/* src/components/Common/SearchBar.scss */
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  input[type='text'] {
+    flex-grow: 1;
+    margin-bottom: 0; // Override global margin-bottom
+    border-color: var(--border-dark); // Ensure border visibility
+  }
+
+  button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    white-space: nowrap; // Prevent button text from wrapping
+    &.clear-btn {
+      background-color: var(--secondary-color);
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap; // Allow buttons to wrap
+    input[type='text'] {
+      width: 100%;
+    }
+    button {
+      flex-grow: 1;
+    }
+  }
+}
