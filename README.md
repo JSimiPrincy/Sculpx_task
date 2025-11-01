@@ -135,14 +135,6 @@ Follow these instructions to set up and run the project locally.
 
 Create a `.env` file in the root of the `mern-app-server` directory and populate it with the following variables:
 NODE_ENV=development
-PORT=5000
-MONGO_URI=mongodb+srv://princy:Princy%402003@cluster0.ovwl00c.mongodb.net/mern-app-db?retryWrites=true&w=majority
-JWT_SECRET=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30
-JWT_EXPIRES_IN=1h
-JWT_COOKIE_EXPIRES_IN=30d
-REFRESH_TOKEN_SECRET=anothersupersecretrefreshkey
-REFRESH_TOKEN_EXPIRES_IN=30d
-CLIENT_URL=http://localhost:3000
 code
 Code
 *   **`MONGO_URI`**: Your MongoDB connection string. **Make sure to replace the placeholder password if you use the provided URI.**
